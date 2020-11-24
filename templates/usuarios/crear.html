@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+{% block title%}
+Crear Usuario
+{% endblock %}
+{% block content %}
+<div class="title-page">
+    <h1>Crear Usuario</h1> 
+</div>
+    <form action="{{ url_for('crear_usuarios')}}" method="POST"> <!-- Se coloca para accionar  -->
+        <div class="form-group">
+            <label for="nombres">Nombres</label>
+            <input class="form-control" type="text" id="nombres" name="nombres">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input class="form-control" type="text" id="apellidos" name="apellidos">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control"  type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" id="password" name="password">
+        </div>
+        <button class="btn btn-success" type="submit">Guardar</button>
+    </form>
+
+{% endblock %}

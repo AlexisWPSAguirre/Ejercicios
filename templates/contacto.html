@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+    Contacto
+{% endblock %}
+{% block content %}
+    <form action="{{url_for ('contacto') }}" method="POST"> <!-- Forma en la que se envian los datos de los input a los servidores
+    tambien es la ruta donde se almacenarán la información-->
+    <!-- Metodo GET: trae información -->
+    <!-- Metodo POST: guardar y editar información -->
+        <div class="form-group">
+            <label for="name">Nombre</label> <!-- El atributo for apunta al id del input es llamado atributo de control-->
+            <input class="form-control" type="text" id="name" name="nombres"> <!-- El atributo name permite a un script acceder a su contenido
+            El atributo id debe ser unico y permite identificar este input en especifico -->
+        <div>
+        <div class="form-group">
+            <label for="email">Correo</label>
+            <input class="form-control" type="text" id="email" name="correo">
+        </div>
+        <div class="form-group">
+            <label for="celular">Celular</label>
+            <input class="form-control" type="text" id="celular" name="celular">
+        </div>
+        </div class="form-grou">
+            <label for="observacion">Observacion</label>
+            <textarea class="form-control" name="" id="observacion" name="observacion" cols="30" rows="2"></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Guardar</button>  <!-- Es submit se relacion con el atributo action del formulario  -->
+        <!-- <button type="button"></button>  Se relacina con el evento "Onclick"  -->
+    </form>
+{% endblock %}
+
